@@ -1,14 +1,46 @@
 .recommend-content {
-    display: flex;
-    justify-content: space-between; /* Add space between the items */
-  }
-  
-  .book-detail {
-    flex: 1; /* Take available space */
-    margin-right: 20px; /* Add some space between the book detail and sidebar */
-  }
-  
-  .sidebar {
-    width: 300px; /* Set a fixed width for the sidebar */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  /* padding: 20px; */
+  background-color: #ffffff;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.book-detail {
+  flex: 1;
+  /* margin-right: 20px; */
+  padding: 20px;
+  /* background-color: #ffffff; */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-detail h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.book-detail p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.book-detail p strong {
+  color: #333;
+}
+
+.book-cover {
+  /* width: 100%; */
+  width: 400px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-container {
+  width: 300px;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import "./Home.css";
 import Header from "~/components/header/Header";
 import Recommend from "../recommend/Recommend";
@@ -85,7 +85,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <Header userID={userID} onSearch={handleSearch} />
-      <h2>Home Page</h2>
+      <h1 className="title-home">Home Page</h1>
       {selectedBook ? (
         <Recommend isbn={selectedBook} userID={userID} />
       ) : (
@@ -97,18 +97,16 @@ const Home = () => {
               onClick={() => handleBookClick(book.ISBN)}
             >
               <div className="book-card">
+                <p className="book-title">
+                  <strong>Title:</strong> {book["Book-Title"]}
+                </p>
                 <img
                   src={book["Image-URL-L"]}
                   alt={book["Book-Title"]}
                   className="book-image"
                 />
                 <div className="book-details">
-                  <p>
-                    <strong>ISBN:</strong> {book.ISBN}
-                  </p>
-                  <p>
-                    <strong>Title:</strong> {book["Book-Title"]}
-                  </p>
+                  
                   <p>
                     <strong>Author:</strong> {book["Book-Author"]}
                   </p>

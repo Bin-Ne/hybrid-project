@@ -12,9 +12,6 @@ const Recommend = () => {
   return (
     <div className="recommend-container">
       <Header userID={userID} />
-      <div className='page-name'>
-        <h1>Recommendations Page</h1>
-      </div>
 
       <div className="book-detail">
         <BookDetail userID={userID} isbn={isbn} />

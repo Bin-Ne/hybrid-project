@@ -1,0 +1,81 @@
+.sidebar {
+    padding: 20px;
+    /* background-color: #f8f8f8; */
+    border-radius: 8px;
+    width: 400px;
+  }
+  
+  .sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar .book-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+
+  .book-list {
+    list-style: none;
+    padding: 0;
+    max-height: 700px; /* Adjust this value as needed */
+    overflow-y: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar .book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar .book-image {
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .sidebar .book-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar .book-title {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+  }
+  
+  .sidebar .book-author,
+  .sidebar .book-publisher,
+  .sidebar .book-year {
+    font-size: 14px;
+    margin: 2px 0;
+    color: #777;
+  }
+  
+  /* Add scrollbar styles */
+.book-list::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .book-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  .book-list::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }

@@ -1,5 +1,5 @@
-// SideBarRecommendBook.js
 import React, { useState, useEffect } from 'react';
+import './SideBarRecommendBook.css';
 
 const SideBarRecommendBook = ({ userID, productID, onBookClick }) => {   
   const [recommendations, setRecommendations] = useState([]);
@@ -24,17 +24,16 @@ const SideBarRecommendBook = ({ userID, productID, onBookClick }) => {
 
   return (
     <div className="sidebar">
-      <h2>SidebarRecommended Books</h2>
-      <ul>
+      <h2>Sidebar Recommended Books</h2>
+      <ul className='book-list'>
         {recommendations.map((book, index) => (
-          <li key={index} onClick={() => onBookClick(book.ISBN)}>
-            <img src={book['Image-URL-S']} alt={book['Book-Title']} />
-            <div>
-              <h3>{book['ISBN']}</h3>
-              <h3>{book['Book-Title']}</h3>
-              <p>Author: {book['Book-Author']}</p>
-              <p>Publisher: {book['Publisher']}</p>
-              <p>Year: {book['Year-Of-Publication']}</p>
+          <li key={index} onClick={() => onBookClick(book.ISBN)} className="book-item">
+            <img src={book['Image-URL-L']} alt={book['Book-Title']} className="book-image" />
+            <div className="book-details">
+              <h3 className="book-title">{book['Book-Title']}</h3>
+              <p className="book-author">Author: {book['Book-Author']}</p>
+              <p className="book-publisher">Publisher: {book['Publisher']}</p>
+              <p className="book-year">Year: {book['Year-Of-Publication']}</p>
             </div>
           </li>
         ))}

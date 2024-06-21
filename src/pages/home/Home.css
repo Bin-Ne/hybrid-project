@@ -1,66 +1,82 @@
 /* Home.css */
-
-.home-container {
-  padding: 20px 160px;
-  background-color: #fff;
+.title-home {
+  padding: 0px 160px;
 }
 
 .books-container {
+  padding: 20px 160px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr); /* Hiển thị 5 cuốn sách mỗi hàng */
+  gap: 20px; /* Khoảng cách giữa các cuốn sách */
 }
 
 .book-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  position: relative;
+  width: 100%; /* Đảm bảo cuốn sách có chiều rộng tối đa */
+  border: 1px solid #ddd;
+  border-radius: 6px;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  position: relative; /* Để icon trái tim có thể đặt vị trí tuyệt đối */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.book-title {
+  width: 80%;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.book-card:hover {
+  transform: translateY(-5px); /* Hiệu ứng nâng cao khi di chuột qua */
+}
+
+.book-card-link {
+  position: relative; /* Cho phép sử dụng position:absolute để căn chỉnh icon trái tim */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.book-card-link:hover {
+  transform: scale(1); /* Hiệu ứng phóng to khi di chuột qua */
 }
 
 .book-image {
   width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0;
+  max-height: 200px; /* Đảm bảo chiều cao hợp lý cho hình ảnh */
+  object-fit: cover; /* Hiển thị hình ảnh mà không bị méo */
 }
 
 .book-details {
   padding: 10px;
-}
-
-.book-details p {
-  margin: 5px 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .favorite-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 20px; /* Kích thước của biểu tượng trái tim */
-  color: #ccc; /*Màu sắc mặc định của biểu tượng trái tim */
-  transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu khi hover */
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.1s ease-in-out;
 }
 
 .favorite-button:hover {
-  color: red; /* Màu sắc của biểu tượng trái tim khi hover */
-}
-
-.favorite-button.favorited {
-  color: red; /* Màu sắc của biểu tượng trái tim khi đã được chọn */
+  transform: scale(1);
+  /* color: red;  */
 }
 
 .favorite-icon {
+  font-size: 2rem;
   color: #ccc;
-  cursor: pointer;
-  font-size: 2rem; /* Cài đặt kích thước biểu tượng */
-  transition: color 0.1s ease; /*Hiệu ứng chuyển đổi màu khi hover*/
 }
 
-.favorite-icon.favorited {
-  color: red; /* Màu sắc của biểu tượng khi đã được chọn */
+.favorited {
+  color: red; /* Đổi màu sắc khi đã yêu thích */
 }

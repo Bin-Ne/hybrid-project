@@ -41,12 +41,12 @@ const BookDetail = ({ userID, isbn }) => {
     <div className='recommend-content'>
       <div className='book-detail'>
         <h2>Book Details</h2>
-        <p>ISBN: {bookInfo['ISBN']}</p>
-        <p>Title: {bookInfo['Book-Title']}</p>
-        <p>Author: {bookInfo['Book-Author']}</p>
-        <p>Publisher: {bookInfo['Publisher']}</p>
-        <p>Year of Publication: {bookInfo['Year-Of-Publication']}</p>
-        <img src={bookInfo['Image-URL-L']} alt="Book cover" />
+        <p><strong>ISBN:</strong> {bookInfo['ISBN']}</p>
+        <p><strong>Title:</strong> {bookInfo['Book-Title']}</p>
+        <p><strong>Author:</strong> {bookInfo['Book-Author']}</p>
+        <p><strong>Publisher:</strong> {bookInfo['Publisher']}</p>
+        <p><strong>Year of Publication:</strong> {bookInfo['Year-Of-Publication']}</p>
+        <img src={bookInfo['Image-URL-L']} alt="Book cover" className='book-cover' />
       </div>
       
       <div className="sidebar">

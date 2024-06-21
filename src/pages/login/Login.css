@@ -1,0 +1,78 @@
+/* Login.css */
+
+/* Reset các style mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Màu nền trang */
+  color: #333; /* Màu chữ chính */
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Sử dụng toàn bộ chiều cao viewport */
+}
+
+.login-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  margin-top: -30px;
+  border-radius: 4px;
+  background-color: white; /* Nền form là màu trắng */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho form */
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-form div {
+  margin-bottom: 10px;
+}
+
+.login-form label {
+  font-size: 16px;
+  font-weight:bold
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 8px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc; /* Chỉ hiển thị border dưới */
+  font-size: 18px;
+  outline: none; /* Loại bỏ đường viền khi focus */
+}
+
+.login-form button {
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  background-color: #333; 
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-form button:hover {
+  background-color: #585858; /* Màu nền khi hover */
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}

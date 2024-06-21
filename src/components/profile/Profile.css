@@ -1,0 +1,124 @@
+/* Profile.css */
+.profile-container {
+  width: 100%;
+  padding: 20px 240px;
+}
+
+.container-favorite-books {
+}
+
+.container-recommended-books {
+
+}
+
+.title-profile {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 16px;
+  margin-top: 26px;
+}
+
+.book-details {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.book-details li {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.book-details li:hover {
+  transform: scale(1.01);
+}
+
+.book-details li img {
+  width: 100%;
+  height: 250px; /* Điều chỉnh chiều cao của ảnh sách */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  display: block;
+}
+
+.book-details li div {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.trash-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  color: #aaa;
+  padding: 5px;
+  cursor: pointer;
+  /* transition: color 0.1s ease-in-out; */
+}
+
+.trash-icon:hover {
+  color: red;
+}
+
+
+
+.recommendations {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.recommendations li {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  background-color: #fff;
+}
+
+.recommendations li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recommendations li img {
+  width: 100%;
+  height: 250px; /* Điều chỉnh chiều cao của ảnh sách */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  display: block;
+}
+
+.recommendations li div {
+  padding: 10px;
+}
+
+.recommendations li p {
+  margin: 5px 0;
+}
+
+.recommendations li:hover .faTrash {
+  color: red;
+}
+
+.recommendations li .faTrash {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.recommendations li .faTrash:hover {
+  color: red;
+}

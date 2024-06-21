@@ -1,0 +1,11 @@
+.recommend-container {
+  width: 100%;
+  max-width: 1200px; /* Limit the maximum width of the container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+}
+
+.page-name {
+  margin-bottom: 20px;
+}
+

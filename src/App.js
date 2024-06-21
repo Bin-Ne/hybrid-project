@@ -1,36 +1,20 @@
-import { Fragment } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { publicRoutes } from './routes';
-import { DefaultLayout } from './components/Layout';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './pages/login/Login';
+import Home from './pages/home/Home';
+import Recommend from './pages/recommend/Recommend';
+import Profile from './components/profile/Profile';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div>
         <Routes>
-          {publicRoutes.map((route, index) => {
-            const Page = route.component;
-
-            let Layout = DefaultLayout;
-
-            if (route.layout) {
-              Layout = route.layout;
-            } else if (route.layout === null) {
-              Layout = Fragment;
-            }
-
-            return (
-              <Route
-                key={index}
-                path={route.path}
-                element={
-                  <Layout>
-                    <Page />
-                  </Layout>
-                }
-              />
-            );
-          })}
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/home/recommend/:isbn" element={<Recommend />} />
+          <Route path="/profile/:userID" element={<Profile />} />
         </Routes>
       </div>
     </Router>
@@ -38,3 +22,8 @@ function App() {
 }
 
 export default App;
+
+
+
+
+

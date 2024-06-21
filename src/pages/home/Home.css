@@ -1,0 +1,66 @@
+/* Home.css */
+
+.home-container {
+  padding: 20px 160px;
+  background-color: #fff;
+}
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Để icon trái tim có thể đặt vị trí tuyệt đối */
+}
+
+.book-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.book-details {
+  padding: 10px;
+}
+
+.book-details p {
+  margin: 5px 0;
+}
+
+.favorite-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px; /* Kích thước của biểu tượng trái tim */
+  color: #ccc; /*Màu sắc mặc định của biểu tượng trái tim */
+  transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu khi hover */
+}
+
+.favorite-button:hover {
+  color: red; /* Màu sắc của biểu tượng trái tim khi hover */
+}
+
+.favorite-button.favorited {
+  color: red; /* Màu sắc của biểu tượng trái tim khi đã được chọn */
+}
+
+.favorite-icon {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 2rem; /* Cài đặt kích thước biểu tượng */
+  transition: color 0.1s ease; /*Hiệu ứng chuyển đổi màu khi hover*/
+}
+
+.favorite-icon.favorited {
+  color: red; /* Màu sắc của biểu tượng khi đã được chọn */
+}

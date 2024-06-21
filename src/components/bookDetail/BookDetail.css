@@ -1,0 +1,14 @@
+.recommend-content {
+    display: flex;
+    justify-content: space-between; /* Add space between the items */
+  }
+  
+  .book-detail {
+    flex: 1; /* Take available space */
+    margin-right: 20px; /* Add some space between the book detail and sidebar */
+  }
+  
+  .sidebar {
+    width: 300px; /* Set a fixed width for the sidebar */
+  }
+  
